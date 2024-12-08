@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DataAccessLayer.Models;
 
-public partial class PriorityLevel
+public class PriorityLevel
 {
     public string PriorityCode { get; set; } = null!;
 

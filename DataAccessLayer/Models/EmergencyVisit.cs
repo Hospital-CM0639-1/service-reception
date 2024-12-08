@@ -3,13 +3,15 @@ using System.Collections.Generic;
 
 namespace DataAccessLayer.Models;
 
-public partial class EmergencyVisit
+public class EmergencyVisit
 {
     public int VisitId { get; set; }
 
     public DateTime? AdmissionTimestamp { get; set; }
 
     public DateTime? DischargeTimestamp { get; set; }
+    
+    public PatientStatus CurrentStatus { get; set; } // ag
 
     public string? TriageNotes { get; set; }
 

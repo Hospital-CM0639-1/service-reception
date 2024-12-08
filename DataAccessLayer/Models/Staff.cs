@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DataAccessLayer.Models;
 
-public partial class Staff
+public class Staff
 {
     public int StaffId { get; set; }
 
@@ -22,6 +22,8 @@ public partial class Staff
     public DateOnly HireDate { get; set; }
 
     public bool? IsActive { get; set; }
+    
+    public StaffRole Role { get; set; } //ag
 
     public virtual ICollection<MedicalProcedure> MedicalProcedures { get; set; } = new List<MedicalProcedure>();
 

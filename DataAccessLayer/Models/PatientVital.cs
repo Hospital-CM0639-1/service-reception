@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DataAccessLayer.Models;
 
-public partial class PatientVital
+public class PatientVital
 {
     public int VitalRecordId { get; set; }
 

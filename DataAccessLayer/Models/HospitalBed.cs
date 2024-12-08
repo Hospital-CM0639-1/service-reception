@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DataAccessLayer.Models;
 
-public partial class HospitalBed
+public class HospitalBed
 {
     public int BedId { get; set; }
 
@@ -12,6 +12,8 @@ public partial class HospitalBed
     public string WardSection { get; set; } = null!;
 
     public string BedNumber { get; set; } = null!;
+    
+    public HospitalBedStatus BedStatus { get; set; } // ag
 
     public DateTime? LastCleanedTimestamp { get; set; }
 

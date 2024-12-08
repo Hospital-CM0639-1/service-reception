@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DataAccessLayer.Models;
 
-public partial class PatientInvoice
+public class PatientInvoice
 {
     public int InvoiceId { get; set; }
 

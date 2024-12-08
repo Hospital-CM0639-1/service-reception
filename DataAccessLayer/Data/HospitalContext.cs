@@ -79,9 +79,7 @@ public partial class HospitalContext : DbContext
 
         modelBuilder.Entity<EmergencyVisitStaff>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("emergency_visit_staff");
+            entity.HasKey(e=> new { e.VisitId, e.StaffId,e.StaffRole }).HasName("emergency_visit_staff_pkey"); //ag
 
             entity.HasIndex(e => new { e.VisitId, e.StaffId }, "idx_emergency_visit_staff");
 

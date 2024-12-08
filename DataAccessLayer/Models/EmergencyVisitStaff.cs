@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 namespace DataAccessLayer.Models;
 
-public partial class EmergencyVisitStaff
+public class EmergencyVisitStaff
 {
+    public StaffRole StaffRole { get; set; } // ag
     public DateTime? AssignedAt { get; set; }
 
     public int VisitId { get; set; }
