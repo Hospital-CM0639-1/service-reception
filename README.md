@@ -1,1 +1,2 @@
-# service-reception
+# Hospital-Service-Reception
+- providing information about patients
