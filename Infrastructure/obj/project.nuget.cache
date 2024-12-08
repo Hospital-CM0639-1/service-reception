@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4VbxUpR4VdzjeER+kODmLsL7bSqqTpw9XiHMAHNvo50LBwCl0TRyK8pY3/ULf3DwswjLK928R3Uj7bNgQMB7HA==",
+  "dgSpecHash": "Tr7qlW4AmFpqBgrk3mZWl3d9NGnJ6Q551zAheFb2BygycmcJEIPu6+OY6xOyamJBvaV6oopxgUqe28P/2YqdMw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\Hospital\\Hospital\\Hospital-Service-Reception\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\hospital\\service-reception\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

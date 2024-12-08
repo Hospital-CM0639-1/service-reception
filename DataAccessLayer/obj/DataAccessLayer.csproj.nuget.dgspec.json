@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\Hospital\\Hospital\\Hospital-Service-Reception\\DataAccessLayer\\DataAccessLayer.csproj": {}
+    "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\hospital\\service-reception\\DataAccessLayer\\DataAccessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\Hospital\\Hospital\\Hospital-Service-Reception\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\hospital\\service-reception\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\Hospital\\Hospital\\Hospital-Service-Reception\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\hospital\\service-reception\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\Hospital\\Hospital\\Hospital-Service-Reception\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectPath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\hospital\\service-reception\\DataAccessLayer\\DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\lukyn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\Hospital\\Hospital\\Hospital-Service-Reception\\DataAccessLayer\\obj\\",
+        "outputPath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\hospital\\service-reception\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lukyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,6 +41,20 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.11, )"
             }

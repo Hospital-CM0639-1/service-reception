@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\Hospital\\Hospital\\Hospital-Service-Reception\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\hospital\\service-reception\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\Hospital\\Hospital\\Hospital-Service-Reception\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\hospital\\service-reception\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\Hospital\\Hospital\\Hospital-Service-Reception\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\hospital\\service-reception\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\Hospital\\Hospital\\Hospital-Service-Reception\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\hospital\\service-reception\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\lukyn\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\Hospital\\Hospital\\Hospital-Service-Reception\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\hospital\\service-reception\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lukyn\\AppData\\Roaming\\NuGet\\NuGet.Config",

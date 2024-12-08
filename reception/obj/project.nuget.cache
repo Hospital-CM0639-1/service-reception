@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "osAzg7w3UP/Znj6+itiCNxXjXMXDLJfd+OtKqpSnOQroS3xVViWN4ZitWRwttYJx5YackLWxsQEaXxuOG9VxGA==",
+  "dgSpecHash": "doVoGa9w0wGWAB2+FtBYHEReDWJg1sj/jlrtEcbpd/eofWuBGgGb+NwvmDBQddjJgida8Ux0yT/YWDJl4/9Caw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\Hospital\\Hospital\\Hospital-Service-Reception\\reception\\reception.csproj",
+  "projectFilePath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\hospital\\service-reception\\reception\\reception.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lukyn\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.1\\microsoft.aspnetcore.openapi.8.0.1.nupkg.sha512",
     "C:\\Users\\lukyn\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

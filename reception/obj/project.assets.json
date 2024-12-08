@@ -465,11 +465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\Hospital\\Hospital\\Hospital-Service-Reception\\reception\\reception.csproj",
+      "projectUniqueName": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\hospital\\service-reception\\reception\\reception.csproj",
       "projectName": "reception",
-      "projectPath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\Hospital\\Hospital\\Hospital-Service-Reception\\reception\\reception.csproj",
+      "projectPath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\hospital\\service-reception\\reception\\reception.csproj",
       "packagesPath": "C:\\Users\\lukyn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\Hospital\\Hospital\\Hospital-Service-Reception\\reception\\obj\\",
+      "outputPath": "C:\\Users\\lukyn\\OneDrive\\Dokumenty\\škola\\ca-foscari\\hospital\\service-reception\\reception\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lukyn\\AppData\\Roaming\\NuGet\\NuGet.Config",
