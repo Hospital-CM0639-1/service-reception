@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAcce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{A96DA686-52F9-4528-B29A-C3A1408DDFB2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL.Psql.Migrations", "DAL.Psql.Migrations\DAL.Psql.Migrations.csproj", "{2A7FC371-8E06-4788-9AA8-CD1191BD29A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,5 +31,9 @@ Global
 		{A96DA686-52F9-4528-B29A-C3A1408DDFB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A96DA686-52F9-4528-B29A-C3A1408DDFB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A96DA686-52F9-4528-B29A-C3A1408DDFB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A7FC371-8E06-4788-9AA8-CD1191BD29A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A7FC371-8E06-4788-9AA8-CD1191BD29A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A7FC371-8E06-4788-9AA8-CD1191BD29A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A7FC371-8E06-4788-9AA8-CD1191BD29A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

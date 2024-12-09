@@ -5,7 +5,7 @@ namespace DataAccessLayer.Models;
 
 public class EmergencyVisitStaff
 {
-    public StaffRole StaffRole { get; set; } // ag
+    public StaffRoleEnum StaffRoleEnum { get; set; } // ag
     public DateTime? AssignedAt { get; set; }
 
     public int VisitId { get; set; }

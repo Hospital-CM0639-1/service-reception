@@ -1,6 +1,6 @@
 ﻿namespace DataAccessLayer.Models;
 
-public enum PatientStatus
+public enum PatientStatusEnum
 {
 Waiting,
 InTreatment,

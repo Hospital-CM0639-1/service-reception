@@ -1,6 +1,6 @@
 ﻿namespace DataAccessLayer.Models;
 
-public enum HospitalBedStatus
+public enum HospitalBedStatusEnum
 {
     Available,
     Occupied,

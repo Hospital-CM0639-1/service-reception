@@ -11,7 +11,7 @@ public class EmergencyVisit
 
     public DateTime? DischargeTimestamp { get; set; }
     
-    public PatientStatus CurrentStatus { get; set; } // ag
+    public PatientStatusEnum CurrentStatusEnum { get; set; } // ag
 
     public string? TriageNotes { get; set; }
 

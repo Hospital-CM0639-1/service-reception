@@ -1,6 +1,6 @@
 ﻿namespace DataAccessLayer.Models;
 
-public enum StaffRole
+public enum StaffRoleEnum
 {
     Doctor,
     Nurse,

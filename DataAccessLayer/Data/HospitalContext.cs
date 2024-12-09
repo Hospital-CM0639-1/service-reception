@@ -79,7 +79,7 @@ public partial class HospitalContext : DbContext
 
         modelBuilder.Entity<EmergencyVisitStaff>(entity =>
         {
-            entity.HasKey(e=> new { e.VisitId, e.StaffId,e.StaffRole }).HasName("emergency_visit_staff_pkey"); //ag
+            entity.HasKey(e=> new { e.VisitId, e.StaffId, StaffRole = e.StaffRoleEnum }).HasName("emergency_visit_staff_pkey"); //ag
 
             entity.HasIndex(e => new { e.VisitId, e.StaffId }, "idx_emergency_visit_staff");
 
@@ -328,7 +328,8 @@ public partial class HospitalContext : DbContext
                 .HasColumnName("specialization");
         });
 
-        OnModelCreatingPartial(modelBuilder);
+        modelBuilder.Seed();
+        base.OnModelCreating(modelBuilder);
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
