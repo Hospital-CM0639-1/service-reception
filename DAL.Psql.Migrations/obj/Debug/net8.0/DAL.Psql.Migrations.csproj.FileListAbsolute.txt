@@ -1,0 +1,16 @@
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\bin\Debug\net8.0\DAL.Psql.Migrations.deps.json
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\bin\Debug\net8.0\DAL.Psql.Migrations.dll
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\bin\Debug\net8.0\DAL.Psql.Migrations.pdb
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\bin\Debug\net8.0\DataAccessLayer.dll
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\bin\Debug\net8.0\DataAccessLayer.pdb
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\obj\Debug\net8.0\DAL.Psql.Migrations.csproj.AssemblyReference.cache
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\obj\Debug\net8.0\DAL.Psql.Migrations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\obj\Debug\net8.0\DAL.Psql.Migrations.AssemblyInfoInputs.cache
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\obj\Debug\net8.0\DAL.Psql.Migrations.AssemblyInfo.cs
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\obj\Debug\net8.0\DAL.Psql.Migrations.csproj.CoreCompileInputs.cache
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\obj\Debug\net8.0\DAL.Psql.Migrations.sourcelink.json
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\obj\Debug\net8.0\DAL.Psql.Migrations.csproj.CopyComplete
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\obj\Debug\net8.0\DAL.Psql.Migrations.dll
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\obj\Debug\net8.0\refint\DAL.Psql.Migrations.dll
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\obj\Debug\net8.0\DAL.Psql.Migrations.pdb
+C:\Users\lukyn\OneDrive\Dokumenty\škola\ca-foscari\hospital\service-reception\DAL.Psql.Migrations\obj\Debug\net8.0\ref\DAL.Psql.Migrations.dll
