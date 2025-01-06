@@ -16,10 +16,12 @@ builder.Services.AddDbContextFactory<HospitalContext>(options =>
         .LogTo(s => System.Diagnostics.Debug.WriteLine(s))
     );
 var connectionString = builder.Configuration.GetConnectionString("Psql");
-Console.WriteLine($"Connection string is: {connectionString}");
+
 builder.Services.AddControllers();
 builder.Services.AddScoped<IBaseService, BaseService>();
 builder.Services.AddScoped<IPatientService, PatientService>();
+builder.Services.AddScoped<IDoctorService, DoctorService>();
+builder.Services.AddScoped<IManagerService, ManagerService>();
 
 
 // Add services to the container.

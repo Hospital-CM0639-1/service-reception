@@ -20,6 +20,7 @@ public class PatientService(HospitalContext dBContext) : BaseService(dBContext),
 
     public Task<bool> DoesPatientExist(int id)
     {
+        Console.WriteLine("-- does patient  exists endpoint");
         return _dBContext.Patients.AnyAsync(patient => patient.PatientId == id);
     }
 
