@@ -1,12 +1,9 @@
 using DataAccessLayer.Data;
+using Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 Console.WriteLine($"Connection string is: {builder.Configuration.GetConnectionString("Psql")}");
 
@@ -18,6 +15,19 @@ builder.Services.AddDbContextFactory<HospitalContext>(options =>
         //.UseLazyLoadingProxies()
         .LogTo(s => System.Diagnostics.Debug.WriteLine(s))
     );
+var connectionString = builder.Configuration.GetConnectionString("Psql");
+
+builder.Services.AddControllers();
+builder.Services.AddScoped<IBaseService, BaseService>();
+builder.Services.AddScoped<IPatientService, PatientService>();
+builder.Services.AddScoped<IDoctorService, DoctorService>();
+builder.Services.AddScoped<IManagerService, ManagerService>();
+
+
+// Add services to the container.
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle    
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
@@ -29,5 +39,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.MapControllers();
 
 app.Run();
