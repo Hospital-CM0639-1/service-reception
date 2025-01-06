@@ -34,8 +34,8 @@ public partial class HospitalContext : DbContext
 
     public virtual DbSet<Staff> Staff { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseNpgsql("Host=localhost;Username=postgres;Password=postgres;Database=hospital");
+    // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //     => optionsBuilder.UseNpgsql("Host=localhost;Username=postgres;Password=postgres;Database=hospital");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

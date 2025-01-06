@@ -16,3 +16,10 @@ dotnet ef migrations add --project DAL.Psql.Migrations\DAL.Psql.Migrations.cspro
 ```bash
 dotnet ef database update --project DAL.Psql.Migrations\DAL.Psql.Migrations.csproj --startup-project reception\reception.csproj --context DataAccessLayer.Data.HospitalContext --configuration Debug 20241209183919_Initial
 ```
+
+If developing via container, use docker-compose up to run
+on url localhost:8080/swagger/index.html - is documentation of API
+Change appsettings.json to connect to database - 
+```bash
+    "Psql": "Host=hospital-database;Port=5432;Database=hospital;Username=postgres;Password=postgres",
+```
