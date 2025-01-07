@@ -10,6 +10,6 @@ public class ManagerService(HospitalContext dbContext) : BaseService(dbContext),
 
     public async Task<bool> HasFreeBedAsync()
     {
-        return await _dbContext.HospitalBeds.AnyAsync(b => b.BedStatusEnum == HospitalBedStatusEnum.Available);
+        return await _dbContext.HospitalBeds.AnyAsync(b => b.CurrentStatus == HospitalBedStatusEnum.AVAILABLE);
     }
 }

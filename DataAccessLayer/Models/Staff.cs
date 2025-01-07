@@ -23,7 +23,7 @@ public class Staff
 
     public bool? IsActive { get; set; }
     
-    public StaffRoleEnum RoleEnum { get; set; } //ag
+    public StaffRoleEnum Role { get; set; } //ag
 
     public virtual ICollection<MedicalProcedure> MedicalProcedures { get; set; } = new List<MedicalProcedure>();
 

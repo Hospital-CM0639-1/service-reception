@@ -2,7 +2,7 @@
 
 public enum StaffRoleEnum
 {
-    Doctor,
-    Nurse,
-    Secretary
+    DOCTOR,
+    NURSE,
+    SECRETARY,
 }
