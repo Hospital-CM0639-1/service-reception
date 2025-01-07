@@ -117,6 +117,10 @@ public partial class HospitalContext : DbContext
             entity.Property(e => e.WardSection)
                 .HasMaxLength(50)
                 .HasColumnName("ward_section");
+            entity.Property(s => s.CurrentStatus)
+                .HasColumnName("current_status")
+                .HasConversion<string>() // Use string conversion for enums
+                .IsRequired();
 
             entity.HasOne(d => d.CurrentVisit).WithMany(p => p.HospitalBeds)
                 .HasForeignKey(d => d.CurrentVisitId)
@@ -326,6 +330,10 @@ public partial class HospitalContext : DbContext
             entity.Property(e => e.Specialization)
                 .HasMaxLength(100)
                 .HasColumnName("specialization");
+            entity.Property(s => s.Role)
+                .HasColumnName("role")
+                .HasConversion<string>() // Use string conversion for enums
+                .IsRequired();
         });
 
         modelBuilder.Seed();

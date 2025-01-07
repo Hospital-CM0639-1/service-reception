@@ -57,7 +57,7 @@ public static class Seeding
     {
         return new List<HospitalBed>()
         {
-            new HospitalBed { BedId = 1, BedNumber = "1", BedStatusEnum = HospitalBedStatusEnum.Available, WardSection = "PRIORITY"}
+            new HospitalBed { BedId = 1, BedNumber = "1", CurrentStatus = HospitalBedStatusEnum.AVAILABLE, WardSection = "PRIORITY"}
         };
     }
     

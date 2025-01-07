@@ -2,8 +2,8 @@
 
 public enum HospitalBedStatusEnum
 {
-    Available,
-    Occupied,
-    Maintenance,
-    Reserved
+    AVAILABLE,
+    OCCUPIED,
+    MAINTENANCE,
+    RESERVED
 }

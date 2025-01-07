@@ -11,7 +11,7 @@ public class DoctorService(HospitalContext dbContext): BaseService(dbContext), I
     public async Task<List<string?>> GetDoctorSpecializationsAsync()
     {
         var xx = await _dbContext.Staff
-            .Where(staff => staff.RoleEnum == StaffRoleEnum.Doctor)
+            .Where(staff => staff.Role == StaffRoleEnum.DOCTOR)
             .Select(staff => staff.Specialization)
             .Distinct()
             .ToListAsync();
@@ -20,7 +20,7 @@ public class DoctorService(HospitalContext dbContext): BaseService(dbContext), I
 
     public Task<List<Staff>> GetDoctorsAsync(string? type = null, bool available = false)
     {
-        var select = _dbContext.Staff.Where(staff => staff.RoleEnum == StaffRoleEnum.Doctor);
+        var select = _dbContext.Staff.Where(staff => staff.Role == StaffRoleEnum.DOCTOR);
         if (type != null)
         {
             select = select.Where(staff => staff.Specialization == type);
