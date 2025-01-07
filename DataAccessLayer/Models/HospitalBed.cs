@@ -13,7 +13,7 @@ public class HospitalBed
 
     public string BedNumber { get; set; } = null!;
     
-    public HospitalBedStatusEnum BedStatusEnum { get; set; } // ag
+    public HospitalBedStatusEnum CurrentStatus { get; set; } // ag
 
     public DateTime? LastCleanedTimestamp { get; set; }
 
