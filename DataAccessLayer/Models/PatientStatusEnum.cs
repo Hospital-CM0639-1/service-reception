@@ -2,8 +2,8 @@
 
 public enum PatientStatusEnum
 {
-Waiting,
-InTreatment,
-Discharged,
-Admitted
+WAITING,
+IN_TREATMENT,
+DISCHARGED,
+ADMITTED
 }

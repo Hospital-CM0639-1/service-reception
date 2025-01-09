@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using DataAccessLayer.Models;
 using Microsoft.EntityFrameworkCore;
+using Npgsql;
 
 namespace DataAccessLayer.Data;
 
@@ -9,6 +10,7 @@ public partial class HospitalContext : DbContext
 {
     public HospitalContext()
     {
+        NpgsqlConnection.GlobalTypeMapper.MapEnum<PatientStatusEnum>();
     }
 
     public HospitalContext(DbContextOptions<HospitalContext> options)
@@ -41,7 +43,7 @@ public partial class HospitalContext : DbContext
     {
         modelBuilder
             .HasPostgresEnum("bed_status", new[] { "AVAILABLE", "UCCUPIED", "MAINTENACE", "RESERVED" })
-            .HasPostgresEnum("patient_status", new[] { "WAITING", "IN_TREATMENT", "DISCHARGED", "ADMITTED" })
+            .HasPostgresEnum<PatientStatusEnum>()
             .HasPostgresEnum("staff_role", new[] { "DOCTOR", "NURSE", "SECRETARY" });
 
         modelBuilder.Entity<EmergencyVisit>(entity =>
@@ -65,7 +67,10 @@ public partial class HospitalContext : DbContext
                 .HasDefaultValueSql("'white'::character varying")
                 .HasColumnName("priority_level");
             entity.Property(e => e.TriageNotes).HasColumnName("triage_notes");
-
+            entity.Property(s => s.CurrentStatus)
+                .HasColumnName("current_status")
+                .HasConversion<string>() // Use string conversion for enums
+                .IsRequired();
             entity.HasOne(d => d.Patient).WithMany(p => p.EmergencyVisits)
                 .HasForeignKey(d => d.PatientId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
