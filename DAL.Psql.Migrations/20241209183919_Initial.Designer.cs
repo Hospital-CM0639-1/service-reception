@@ -43,7 +43,7 @@ namespace DAL.Psql.Migrations.Migrations
                         .HasColumnName("admission_timestamp")
                         .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
-                    b.Property<int>("CurrentStatusEnum")
+                    b.Property<int>("CurrentStatus")
                         .HasColumnType("integer");
 
                     b.Property<DateTime?>("DischargeTimestamp")
