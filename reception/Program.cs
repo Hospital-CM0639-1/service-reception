@@ -53,7 +53,7 @@ builder.Services.AddAuthorization();
 // Add services to the container.
 builder.Services.AddControllers(options =>
 {
-    options.Conventions.Insert(0, new GlobalRoutePrefixConvention("api/v1/reception-service"));
+    options.Conventions.Insert(0, new GlobalRoutePrefixConvention("api/v1/service-reception"));
 });
 builder.Services.AddScoped<IBaseService, BaseService>();
 builder.Services.AddScoped<IPatientService, PatientService>();

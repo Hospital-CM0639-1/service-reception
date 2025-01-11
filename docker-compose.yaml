@@ -3,7 +3,7 @@ version: '3.8'
 services:
   reception:
     image: service-reception
-    container_name: reception-service
+    container_name: service-reception
     build:
       context: .
       dockerfile: reception/Dockerfile

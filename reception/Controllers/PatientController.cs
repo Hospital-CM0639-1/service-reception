@@ -10,6 +10,7 @@ namespace reception.Controllers;
 
 [ApiController]
 [Route("patient")]
+[Authorize]
 public class PatientController(IPatientService patientService): Controller
 {
     [HttpGet]
@@ -25,7 +26,6 @@ public class PatientController(IPatientService patientService): Controller
     [ProducesResponseType(typeof(Patient), StatusCodes.Status201Created)]
     public async Task<IActionResult?> GetPatientById(int id)
     {
-        Console.WriteLine("AAAAAAAAAAAAAA");
         return Ok(await patientService.GetPatientByIdAsync(id));
     }
     
@@ -40,13 +40,12 @@ public class PatientController(IPatientService patientService): Controller
         
         var result = new OutputGetAll
         {
-            content = patients,
-            totalElements = totalPatientsCount,
-            totalPages = totalPages,
-            number = filterQueryParameters.Page,
-            size = filterQueryParameters.Number
+            Content = patients,
+            TotalElements = totalPatientsCount,
+            TotalPages = totalPages,
+            Number = filterQueryParameters.Page,
+            Size = filterQueryParameters.Number
         };
-
         return Ok(result);
     }
     
