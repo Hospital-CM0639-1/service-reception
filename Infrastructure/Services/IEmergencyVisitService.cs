@@ -4,5 +4,5 @@ namespace Infrastructure.Services;
 
 public interface IEmergencyVisitService: IBaseService
 {
-    public Task<bool> AddEmergencyVisitAsync(EmergencyVisit emergencyVisit);
+    public Task<bool> AddEmergencyVisitAsync(EmergencyVisitInput emergencyVisit);
 }

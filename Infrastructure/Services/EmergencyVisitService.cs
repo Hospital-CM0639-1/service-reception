@@ -1,14 +1,14 @@
 ﻿using DataAccessLayer.Data;
 using DataAccessLayer.Models;
+using Infrastructure.InputModels;
 using Microsoft.EntityFrameworkCore;
-using EmergencyVisit = Infrastructure.InputModels.EmergencyVisit;
 
 namespace Infrastructure.Services;
 
 public class EmergencyVisitService(HospitalContext hospitalContext)
     : BaseService(hospitalContext), IEmergencyVisitService
 {
-    public async Task<bool> AddEmergencyVisitAsync(EmergencyVisit emergencyVisit)
+    public async Task<bool> AddEmergencyVisitAsync(EmergencyVisitInput emergencyVisit)
     {
         var patient = await hospitalContext.Patients.FindAsync(emergencyVisit.PatientId);
         if (patient == null)

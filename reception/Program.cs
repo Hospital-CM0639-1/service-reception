@@ -74,11 +74,11 @@ var app = builder.Build();
     
     var swaggerProvider = app.Services.GetRequiredService<ISwaggerProvider>();
     var swagger = swaggerProvider.GetSwagger("v1");
-    var stringWriter = new StringWriter();
-    swagger.SerializeAsV3(new OpenApiYamlWriter(stringWriter));
-    var swaggerYaml = stringWriter.ToString();
-    File.WriteAllText("./swagger.yaml", swaggerYaml);
-    Console.WriteLine(swaggerYaml);
+    // var stringWriter = new StringWriter();
+    // swagger.SerializeAsV3(new OpenApiYamlWriter(stringWriter));
+    // var swaggerYaml = stringWriter.ToString();
+    // File.WriteAllText("./swagger.yaml", swaggerYaml);
+    // Console.WriteLine(swaggerYaml);
 // }
 
 app.UseHttpsRedirection();

@@ -1,8 +1,6 @@
-﻿using DataAccessLayer.Models;
+﻿namespace Infrastructure.InputModels;
 
-namespace Infrastructure.InputModels;
-
-public class EmergencyVisit
+public class EmergencyVisitInput
 {
     public string Status { get; set; }
     public string PriorityLevel { get; set; }

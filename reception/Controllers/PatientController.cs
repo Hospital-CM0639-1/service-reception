@@ -3,6 +3,7 @@ using Infrastructure.InputModels;
 using Infrastructure.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using reception.OutputModels;
 using reception.QueryParameters;
 
 namespace reception.Controllers;
@@ -13,7 +14,7 @@ public class PatientController(IPatientService patientService): Controller
 {
     [HttpGet]
     [Route("exists")]
-    // [ProducesResponseType(typeof(bool), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(bool), StatusCodes.Status201Created)]
     public async Task<IActionResult> DoesPatientExists(int id)
     {
         return Ok(await patientService.DoesPatientExist(id));
@@ -21,7 +22,7 @@ public class PatientController(IPatientService patientService): Controller
     
     [HttpGet]
     [Route("get")]
-    // [ProducesResponseType(typeof(Patient), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(Patient), StatusCodes.Status201Created)]
     public async Task<IActionResult?> GetPatientById(int id)
     {
         Console.WriteLine("AAAAAAAAAAAAAA");
@@ -30,13 +31,14 @@ public class PatientController(IPatientService patientService): Controller
     
     [HttpGet]
     [Route("getall")]
+    [ProducesResponseType(typeof(OutputGetAll), StatusCodes.Status201Created)]
     public async Task<IActionResult> GetPatients([FromQuery]PatientGetFilterQueryParameters filterQueryParameters)
     {
         var patients = await patientService.GetPatientsAsync(filterQueryParameters);
         var totalPatientsCount = await patientService.GetTotalPatientsCountAsync();
         var totalPages = (int)Math.Ceiling((double)totalPatientsCount / filterQueryParameters.Number);
         
-        var result = new
+        var result = new OutputGetAll
         {
             content = patients,
             totalElements = totalPatientsCount,
@@ -50,6 +52,7 @@ public class PatientController(IPatientService patientService): Controller
     
     [HttpPost]
     [Route("create")]
+    [ProducesResponseType(typeof(bool), StatusCodes.Status201Created)]
     public async Task<IActionResult> AddPatient([FromBody] RegistrationPatient patient)
     {
         var output = await patientService.AddPatientAsync(patient);
@@ -59,6 +62,7 @@ public class PatientController(IPatientService patientService): Controller
     
     [HttpPut]
     [Route("update")]
+    [ProducesResponseType(typeof(bool), StatusCodes.Status201Created)]
     public async Task<IActionResult> UpdatePatient([FromBody] RegistrationPatient patient)
     {
         var output = await patientService.UpdatePatientAsync(patient);

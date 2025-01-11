@@ -1,4 +1,5 @@
-﻿using Infrastructure.Services;
+﻿using DataAccessLayer.Models;
+using Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace reception.Controllers;
@@ -9,6 +10,7 @@ public class InformationController (IDoctorService doctorService, IManagerServic
 { 
     [HttpGet]
     [Route("doctor_types")]
+    [ProducesResponseType(typeof(List<string?>), StatusCodes.Status201Created)]
     public async Task<IActionResult> GetTypesOfDoctors()
     {
         return Ok(await doctorService.GetDoctorSpecializationsAsync());
@@ -16,6 +18,7 @@ public class InformationController (IDoctorService doctorService, IManagerServic
     
     [HttpGet]
     [Route("doctors/{type}")]
+    [ProducesResponseType(typeof(List<Staff>), StatusCodes.Status201Created)]
     public async Task<IActionResult> GetDoctorsByType(string type)
     {
         return Ok(await doctorService.GetDoctorsAsync(type));
@@ -23,6 +26,7 @@ public class InformationController (IDoctorService doctorService, IManagerServic
     
     [HttpGet]
     [Route("doctors_on_duty")]
+    [ProducesResponseType(typeof(List<Staff?>), StatusCodes.Status201Created)]
     public async Task<IActionResult> GetDoctorsAvailable()
     {
         return Ok(await doctorService.GetDoctorsAsync(available: true));
@@ -30,6 +34,7 @@ public class InformationController (IDoctorService doctorService, IManagerServic
     
     [HttpGet]
     [Route("free_bed")]
+    [ProducesResponseType(typeof(bool), StatusCodes.Status201Created)]
     public async Task<IActionResult> GetFreeBeds()
     {
         return Ok(await managerService.HasFreeBedAsync());
