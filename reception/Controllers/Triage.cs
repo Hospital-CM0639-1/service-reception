@@ -10,6 +10,7 @@ public class Triage(IEmergencyVisitService emergencyVisitService) : Controller
 {
     [HttpPost]
     [Route("create")]
+    // [ProducesResponseType(typeof(bool), StatusCodes.Status201Created)]
     public async Task<ActionResult> AddEmergencyVisit([FromBody] EmergencyVisit emergencyVisit)
     {
         var result = await emergencyVisitService.AddEmergencyVisitAsync(emergencyVisit);

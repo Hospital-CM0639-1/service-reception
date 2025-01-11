@@ -13,6 +13,7 @@ public class PatientController(IPatientService patientService): Controller
 {
     [HttpGet]
     [Route("exists")]
+    // [ProducesResponseType(typeof(bool), StatusCodes.Status201Created)]
     public async Task<IActionResult> DoesPatientExists(int id)
     {
         return Ok(await patientService.DoesPatientExist(id));
@@ -20,8 +21,10 @@ public class PatientController(IPatientService patientService): Controller
     
     [HttpGet]
     [Route("get")]
-    public async Task<IActionResult> GetPatientById(int id)
+    // [ProducesResponseType(typeof(Patient), StatusCodes.Status201Created)]
+    public async Task<IActionResult?> GetPatientById(int id)
     {
+        Console.WriteLine("AAAAAAAAAAAAAA");
         return Ok(await patientService.GetPatientByIdAsync(id));
     }
     

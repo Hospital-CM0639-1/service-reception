@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Mvc.ApplicationModels;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Writers;
 using Npgsql;
 using reception.Swagger;
+using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -64,12 +66,20 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
+// // Configure the HTTP request pipeline.
+// if (app.Environment.IsDevelopment())
+// {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+    
+    var swaggerProvider = app.Services.GetRequiredService<ISwaggerProvider>();
+    var swagger = swaggerProvider.GetSwagger("v1");
+    var stringWriter = new StringWriter();
+    swagger.SerializeAsV3(new OpenApiYamlWriter(stringWriter));
+    var swaggerYaml = stringWriter.ToString();
+    File.WriteAllText("./swagger.yaml", swaggerYaml);
+    Console.WriteLine(swaggerYaml);
+// }
 
 app.UseHttpsRedirection();
 

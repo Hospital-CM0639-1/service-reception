@@ -1,18 +1,18 @@
 version: '3.8'
-  
+
 services:
   reception:
-    image: reception
-    container_name: reception-compose
+    image: service-reception
+    container_name: reception-service
     build:
       context: .
-      dockerfile: ./Dockerfile
+      dockerfile: reception/Dockerfile
     ports:
       - "8080:8080"
       - "5084:5084"
     networks:
       - net_storage
-  
+
 networks:
   net_storage:
     name: net_storage
