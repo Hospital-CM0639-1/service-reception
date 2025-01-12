@@ -99,7 +99,7 @@ namespace DAL.Psql.Migrations.Migrations
 
                     b.HasIndex(new[] { "VisitId", "StaffId" }, "idx_emergency_visit_staff");
 
-                    b.ToTable("EmergencyVisitStaffs");
+                    b.ToTable("EmergencyVisitStaff");
                 });
 
             modelBuilder.Entity("DataAccessLayer.Models.HospitalBed", b =>

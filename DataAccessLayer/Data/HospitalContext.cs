@@ -20,7 +20,7 @@ public partial class HospitalContext : DbContext
 
     public virtual DbSet<EmergencyVisit> EmergencyVisits { get; set; }
 
-    public virtual DbSet<EmergencyVisitStaff> EmergencyVisitStaffs { get; set; }
+    public virtual DbSet<EmergencyVisitStaff> EmergencyVisitStaff { get; set; }
 
     public virtual DbSet<HospitalBed> HospitalBeds { get; set; }
 

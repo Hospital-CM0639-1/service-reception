@@ -21,7 +21,18 @@ public class EmergencyVisitService(HospitalContext hospitalContext)
 
         await hospitalContext.Database.ExecuteSqlRawAsync(sql, emergencyVisit.PatientId, emergencyVisit.Status,
             emergencyVisit.PriorityLevel.ToLower(), emergencyVisit.TriageNotes);
-
+        
+        var xx = hospitalContext.EmergencyVisits.Where(p => p.PatientId == emergencyVisit.PatientId)
+            .OrderByDescending(p => p.AdmissionTimestamp)
+            .FirstOrDefault();
+        
+        if (xx != null && emergencyVisit.DoctorId != null)
+        {
+            var sql2 = "INSERT INTO emergency_visit_staff (staff_role, visit_id, staff_id) " +
+                "VALUES ('DOCTOR'::staff_role, @p0, @p1)";
+            
+            await hospitalContext.Database.ExecuteSqlRawAsync(sql2, xx.VisitId, emergencyVisit.DoctorId.Value);
+        }
         return true;
     }
 }
