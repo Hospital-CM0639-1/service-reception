@@ -46,7 +46,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
             ValidateLifetime = false,   
             ValidateIssuerSigningKey = true,
             IssuerSigningKey = new RsaSecurityKey(rsaKey)
-        }; 
+        };
+        
     });
 builder.Services.AddAuthorization();
 
